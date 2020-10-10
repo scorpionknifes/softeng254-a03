@@ -111,7 +111,6 @@ public final class SceneManager {
     public void switchScene(final Scenes scene) throws RuntimeException {
         Scene next = _scenes.computeIfAbsent(scene, k -> {
             try {
-                System.out.println(PATH + k._filename);
                 Parent root = FXMLLoader.load(getClass().getResource(PATH + k._filename));
                 return new Scene(root, DEFAULT_WIDTH, DEFAULT_HEIGHT);
             } catch (IOException ex) {

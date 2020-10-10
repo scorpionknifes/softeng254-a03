@@ -44,7 +44,6 @@ public class ProductsMenu {
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 1 && (! row.isEmpty()) ) {
                     Product rowData = row.getItem();
-                    System.out.println(rowData);
                     rowData.handleClick();
                 }
             });

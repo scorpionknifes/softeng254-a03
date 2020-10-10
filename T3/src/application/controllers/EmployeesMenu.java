@@ -47,7 +47,6 @@ public class EmployeesMenu {
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 1 && (! row.isEmpty()) ) {
                     Employee rowData = row.getItem();
-                    System.out.println(rowData);
                     rowData.handleClick();
                 }
             });

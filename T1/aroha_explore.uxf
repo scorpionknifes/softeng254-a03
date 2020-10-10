@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1496</x>
+      <y>99</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+Person
+--
+name: String
+email: String
+address: String
+contactNo: String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1364</x>
+      <y>308</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+creditCardNo: String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1628</x>
+      <y>308</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+IRDNumber: String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1595</x>
+      <y>231</y>
+      <w>33</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1463</x>
+      <y>264</y>
+      <w>297</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0;250.0;10.0;250.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>99</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+Product
+--
+name: String
+price: Float
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>572</x>
+      <y>308</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>Flight
+--
+departure: Date
+destination: String
+airline: Airline
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>836</x>
+      <y>308</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>PackageDeal
+--
+hotelDeal: HotelDeal
+flight: Flight
+travelService: TravelService
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>539</x>
+      <y>231</y>
+      <w>33</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>407</x>
+      <y>264</y>
+      <w>297</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0;250.0;10.0;250.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>308</x>
+      <y>308</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>HotelDeal
+--
+start: Date
+end: Date
+hotel: Hotel
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>44</x>
+      <y>308</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>ProductSpecial
+--
+product: Product
+start: Date
+end: Date
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>671</x>
+      <y>264</y>
+      <w>297</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0;250.0;10.0;250.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>143</x>
+      <y>264</y>
+      <w>297</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0;250.0;10.0;250.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1034</x>
+      <y>99</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>Sale
+--
+product: Product
+customer: Customer
+employee: Employee
+date: Date
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>649</x>
+      <y>143</y>
+      <w>407</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+&lt; sold</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1166</x>
+      <y>231</y>
+      <w>352</w>
+      <h>319</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+sold to &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0;280.0;270.0;280.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1111</x>
+      <y>231</y>
+      <w>671</w>
+      <h>374</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+sold by &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;320.0;570.0;320.0;570.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>55</x>
+      <y>143</y>
+      <w>407</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+special &gt;</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0;350.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>308</x>
+      <y>792</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>Hotel
+--
+address: String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>572</x>
+      <y>792</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>Airline
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>671</x>
+      <y>440</y>
+      <w>286</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1..1
+&lt; includes</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;220.0;80.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>407</x>
+      <y>440</y>
+      <w>616</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1..1
+&lt; includes</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0;520.0;130.0;520.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>440</y>
+      <w>132</w>
+      <h>374</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=1..*
+provided by &gt;
+layer=2</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>363</x>
+      <y>440</y>
+      <w>132</w>
+      <h>374</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+provided by &gt;
+layer=2</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1001</x>
+      <y>440</y>
+      <w>132</w>
+      <h>374</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=1..*
+provided by &gt;
+layer=2</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>836</x>
+      <y>792</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>TravelService
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>572</x>
+      <y>1023</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+Provider
+--
+name: String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>671</x>
+      <y>924</y>
+      <w>33</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>407</x>
+      <y>924</y>
+      <w>561</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;490.0;50.0;490.0;10.0</additional_attributes>
+  </element>
+</diagram>

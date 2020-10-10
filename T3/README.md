@@ -1,6 +1,11 @@
 # Aroha Explore Click Dummy
 
-Built with Java 11 and JavaFX 11
+Built with Java 1.8
+
+```bash
+java -jar ArohaExplore.jar
+```
+
 
 ## Getting Started
 

@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.SalesMenu">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.CustomersMenu">
    <children>
       <VBox alignment="CENTER" layoutX="200.0" layoutY="68.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER" prefHeight="14.0" prefWidth="1200.0">
                <children>
                   <Pane prefHeight="53.0" prefWidth="407.0" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" text="Recent Sales">
+                  <Label alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" text="Products">
                      <font>
                         <Font size="36.0" />
                      </font>
@@ -38,13 +38,10 @@
             <Pane prefHeight="81.0" prefWidth="1200.0" />
             <TableView fx:id="_tableView" accessibleRole="TEXT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="931.0">
               <columns>
-                <TableColumn prefWidth="200.0" text="Product" />
-                <TableColumn prefWidth="200.0" text="Customer" />
+                <TableColumn prefWidth="200.0" text="Name" />
+                <TableColumn prefWidth="200.0" text="Type" />
+                  <TableColumn prefWidth="200.0" text="Provider" />
                   <TableColumn prefWidth="200.0" text="Price" />
-                  <TableColumn prefWidth="200.0" text="Date" />
-                  <TableColumn prefWidth="200.0" text="Employee" />
-                  <TableColumn prefWidth="50.0" resizable="false" />
-                  <TableColumn prefWidth="50.0" resizable="false" />
               </columns>
                <opaqueInsets>
                   <Insets />

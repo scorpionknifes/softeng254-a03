@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 
-public class SalesMenu {
+public class EmployeesMenu {
 
     private final SceneManager _sceneManager = SceneManager.getInstance();
 
@@ -14,7 +14,7 @@ public class SalesMenu {
 
     @FXML
     void handleAdd(ActionEvent event) {
-        
+
     }
 
     @FXML

@@ -4,10 +4,10 @@ public class StateManager {
 
     private static StateManager _instance = new StateManager();
     
-    private Select _select;
+    private Select _select = Select.EMPLOYEE;
 
     public enum Select {
-        EMPLOYEE, PRODUCT, CUSTOMER,
+        EMPLOYEE, PRODUCT, CUSTOMER, HOTEL, AIRLINE, TRAVEL,
     }
 
     public enum Product {

@@ -1,5 +1,7 @@
 package application.models;
 
+import application.SceneManager;
+import application.SceneManager.Scenes;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Customer {
@@ -8,6 +10,8 @@ public class Customer {
     private SimpleStringProperty address;
     private SimpleStringProperty contactNo;
     private SimpleStringProperty creditNo;
+    
+    private final SceneManager _sceneManager = SceneManager.getInstance();
 
     public Customer(String s1, String s2, String s3, String s4, String s5) {
         name = new SimpleStringProperty(s1);
@@ -15,6 +19,10 @@ public class Customer {
         address = new SimpleStringProperty(s3);
         contactNo = new SimpleStringProperty(s4);
         creditNo = new SimpleStringProperty(s5);
+    }
+
+    public void handleClick() {
+        _sceneManager.switchScene(Scenes.CUSTOMERS_MENU);
     }
 
     /**

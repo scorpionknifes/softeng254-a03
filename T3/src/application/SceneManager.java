@@ -43,13 +43,20 @@ public final class SceneManager {
         PRODUCTS_MENU("ProductsMenu.fxml"),
         /** Product scene */
         PRODUCT_SCREEN("Product.fxml"),
+        /** HotelDeal */
+        HOTEL_DEAL("HotelDeal.fxml"),
+        /** Flight */
+        FLIGHT("Flight.fxml"),
+        /** PackageDeal */
+        PACKAGE_DEAL("PackageDeal.fxml"),
         /** Customers Menu scene */
         CUSTOMERS_MENU("CustomersMenu.fxml"),
-        /**  */
-
+        /** Add Hotel scene */
+        ADD_HOTEL("AddHotel.fxml"),
+        /** Add Provider scene */
+        ADD_PROVIDER("AddProvider.fxml"),
         /** Employees Menu scene */
         EMPLOYEES_MENU("EmployeesMenu.fxml"),
-
         /** Select PopUp scene */
         SELECT_SCREEN("SelectScreen.fxml"),
         ;

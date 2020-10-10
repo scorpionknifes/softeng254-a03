@@ -2,11 +2,13 @@ package application.controllers;
 
 import application.models.Product;
 import application.SceneManager;
+import application.SceneManager.Scenes;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
@@ -36,6 +38,18 @@ public class ProductsMenu {
         _priceColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("price"));
 
         _tableView.setItems(getProducts());
+
+        _tableView.setRowFactory( tv -> {
+            TableRow<Product> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 1 && (! row.isEmpty()) ) {
+                    Product rowData = row.getItem();
+                    System.out.println(rowData);
+                    rowData.handleClick();
+                }
+            });
+            return row ;
+        });
     }
 
     private ObservableList<Product> getProducts() {
@@ -51,7 +65,7 @@ public class ProductsMenu {
 
     @FXML
     void handleAdd(ActionEvent event) {
-        
+        _sceneManager.switchScene(Scenes.PRODUCT_SCREEN);
     }
 
     @FXML

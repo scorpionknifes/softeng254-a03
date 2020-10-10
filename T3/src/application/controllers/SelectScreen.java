@@ -52,6 +52,25 @@ public class SelectScreen {
                 _selectBtns.add(new SelectBtn("Aiden"));
                 _selectBtns.add(new SelectBtn("Robot"));
                 break;
+            case HOTEL:
+                _titleText.setText("Select Hotel");
+                _manageBtn.setText("Add Hotel");
+                _selectBtns.add(new SelectBtn("Aiden"));
+                _selectBtns.add(new SelectBtn("Robot"));
+                break;
+            case AIRLINE:
+                _titleText.setText("Select Airline");
+                _manageBtn.setText("Add Airline");
+                _selectBtns.add(new SelectBtn("NZ Airline"));
+                _selectBtns.add(new SelectBtn("Fake Airline"));
+                break;
+            case TRAVEL:
+                _titleText.setText("Select Travel Provider");
+                _manageBtn.setText("Add Provider");
+                _selectBtns.add(new SelectBtn("NZ Travel Agency"));
+                _selectBtns.add(new SelectBtn("Agency"));
+                _selectBtns.add(new SelectBtn("Fun Agency"));
+                break;
             default:
                 _titleText.setText("Select");
                 break;
@@ -75,6 +94,15 @@ public class SelectScreen {
                 break;
             case EMPLOYEE:
                 _sceneManager.switchScene(Scenes.EMPLOYEES_MENU);
+                break;
+            case HOTEL:
+                _sceneManager.popUp(Scenes.ADD_HOTEL);
+                break;
+            case AIRLINE:
+                _sceneManager.popUp(Scenes.ADD_PROVIDER);
+                break;
+            case TRAVEL:
+                _sceneManager.popUp(Scenes.ADD_PROVIDER);
                 break;
             default:
                 break;

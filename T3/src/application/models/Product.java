@@ -1,5 +1,7 @@
 package application.models;
 
+import application.SceneManager;
+import application.SceneManager.Scenes;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Product {
@@ -8,11 +10,17 @@ public class Product {
     private SimpleStringProperty provider;
     private SimpleStringProperty price;
 
+    private final SceneManager _sceneManager = SceneManager.getInstance();
+
     public Product(String s1, String s2, String s3, String s4) {
         name = new SimpleStringProperty(s1);
         type = new SimpleStringProperty(s2);
         provider = new SimpleStringProperty(s3);
         price = new SimpleStringProperty(s4);
+    }
+
+    public void handleClick() {
+        _sceneManager.switchScene(Scenes.PRODUCT_SCREEN);
     }
 
     /**

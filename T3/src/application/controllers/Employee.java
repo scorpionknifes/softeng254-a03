@@ -1,11 +1,10 @@
 package application.controllers;
 
 import application.SceneManager;
-import application.SceneManager.Scenes;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-public class Flight {
+public class Employee {
 
     private final SceneManager _sceneManager = SceneManager.getInstance();
 
@@ -15,8 +14,8 @@ public class Flight {
     }
 
     @FXML
-    void handleEdit(ActionEvent event) {
-        _sceneManager.switchScene(Scenes.PRODUCT_SCREEN);
+    void handleSubmit(ActionEvent event) {
+        _sceneManager.backScene();
     }
 
 }

@@ -51,12 +51,16 @@ public final class SceneManager {
         PACKAGE_DEAL("PackageDeal.fxml"),
         /** Customers Menu scene */
         CUSTOMERS_MENU("CustomersMenu.fxml"),
+        /** Customer scene */
+        CUSTOMER("Customer.fxml"),
         /** Add Hotel scene */
         ADD_HOTEL("AddHotel.fxml"),
         /** Add Provider scene */
         ADD_PROVIDER("AddProvider.fxml"),
         /** Employees Menu scene */
         EMPLOYEES_MENU("EmployeesMenu.fxml"),
+        /** Employee scene */
+        EMPLOYEE("Employee.fxml"),
         /** Select PopUp scene */
         SELECT_SCREEN("SelectScreen.fxml"),
         ;

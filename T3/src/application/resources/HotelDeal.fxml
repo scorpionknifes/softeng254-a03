@@ -97,7 +97,7 @@
             <Pane prefHeight="200.0" prefWidth="200.0" />
             <HBox alignment="CENTER" prefHeight="13.0" prefWidth="1200.0" spacing="10.0">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSubmit" prefWidth="200.0" text="Add">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleEdit" prefWidth="200.0" text="Edit">
                      <font>
                         <Font size="18.0" />
                      </font>

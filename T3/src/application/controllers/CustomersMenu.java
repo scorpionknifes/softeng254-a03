@@ -1,6 +1,7 @@
 package application.controllers;
 
 import application.SceneManager;
+import application.SceneManager.Scenes;
 import application.models.Customer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -68,7 +69,7 @@ public class CustomersMenu {
 
     @FXML
     void handleAdd(ActionEvent event) {
-
+        _sceneManager.switchScene(Scenes.CUSTOMER);
     }
 
     @FXML

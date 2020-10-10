@@ -1,12 +1,14 @@
 package application.controllers;
 
 import application.SceneManager;
+import application.SceneManager.Scenes;
 import application.models.Employee;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
@@ -40,6 +42,17 @@ public class EmployeesMenu {
         _irdNoColumn.setCellValueFactory(new PropertyValueFactory<Employee, String>("irdNo"));
 
         _tableView.setItems(getEmployees());
+        _tableView.setRowFactory( tv -> {
+            TableRow<Employee> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 1 && (! row.isEmpty()) ) {
+                    Employee rowData = row.getItem();
+                    System.out.println(rowData);
+                    rowData.handleClick();
+                }
+            });
+            return row ;
+        });
     }
 
     private ObservableList<Employee> getEmployees() {
@@ -55,7 +68,7 @@ public class EmployeesMenu {
 
     @FXML
     void handleAdd(ActionEvent event) {
-
+        _sceneManager.switchScene(Scenes.EMPLOYEE);
     }
 
     @FXML

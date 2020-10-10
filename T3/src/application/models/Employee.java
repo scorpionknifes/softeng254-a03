@@ -1,5 +1,7 @@
 package application.models;
 
+import application.SceneManager;
+import application.SceneManager.Scenes;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Employee {
@@ -9,12 +11,18 @@ public class Employee {
     private SimpleStringProperty contactNo;
     private SimpleStringProperty irdNo;
 
+    private final SceneManager _sceneManager = SceneManager.getInstance();
+
     public Employee(String s1, String s2, String s3, String s4, String s5) {
         name = new SimpleStringProperty(s1);
         email = new SimpleStringProperty(s2);
         address = new SimpleStringProperty(s3);
         contactNo = new SimpleStringProperty(s4);
         irdNo = new SimpleStringProperty(s5);
+    }
+
+    public void handleClick() {
+        _sceneManager.switchScene(Scenes.EMPLOYEE);
     }
 
     /**

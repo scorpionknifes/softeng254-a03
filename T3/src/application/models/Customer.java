@@ -10,7 +10,7 @@ public class Customer {
     private SimpleStringProperty address;
     private SimpleStringProperty contactNo;
     private SimpleStringProperty creditNo;
-    
+
     private final SceneManager _sceneManager = SceneManager.getInstance();
 
     public Customer(String s1, String s2, String s3, String s4, String s5) {
@@ -22,7 +22,7 @@ public class Customer {
     }
 
     public void handleClick() {
-        _sceneManager.switchScene(Scenes.CUSTOMERS_MENU);
+        _sceneManager.switchScene(Scenes.CUSTOMER);
     }
 
     /**

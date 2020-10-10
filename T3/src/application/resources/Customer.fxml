@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -12,11 +13,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.Flight">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.Customer">
    <children>
       <VBox alignment="CENTER" layoutX="200.0" layoutY="68.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="_flightName" alignment="CENTER" contentDisplay="CENTER" text="Flight">
+            <Label alignment="CENTER" contentDisplay="CENTER" text="New/Edit Customer">
                <font>
                   <Font size="36.0" />
                </font>
@@ -26,17 +27,22 @@
             </Label>
             <Pane prefHeight="200.0" prefWidth="200.0" />
             <GridPane alignment="CENTER">
-               <columnConstraints>
-                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
                   <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-               </rowConstraints>
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" />
+               </VBox.margin>
                <children>
-                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Departure:">
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Email:" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -44,7 +50,7 @@
                         <Insets bottom="10.0" right="20.0" top="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Destination:" GridPane.rowIndex="1">
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Address:" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -52,7 +58,7 @@
                         <Insets bottom="10.0" right="20.0" top="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Airline:" GridPane.rowIndex="2">
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Contact No:" GridPane.rowIndex="3">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -60,27 +66,53 @@
                         <Insets bottom="10.0" right="20.0" top="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Wellington" GridPane.columnIndex="1">
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Credit Card No:" GridPane.rowIndex="4">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" right="20.0" top="10.0" />
+                     </GridPane.margin>
                   </Label>
-                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Auckland" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Name:">
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" right="20.0" top="10.0" />
+                     </GridPane.margin>
                   </Label>
-                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Example Airline" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <TextField prefHeight="25.0" prefWidth="560.0" promptText="Name" GridPane.columnIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
-                  </Label>
+                  </TextField>
+                  <TextField prefHeight="25.0" prefWidth="560.0" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="25.0" prefWidth="560.0" promptText="Address" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="25.0" prefWidth="560.0" promptText="Contact No" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="25.0" prefWidth="560.0" promptText="Credit Card No" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
                </children>
             </GridPane>
             <Pane prefHeight="200.0" prefWidth="200.0" />
             <HBox alignment="CENTER" prefHeight="13.0" prefWidth="1200.0" spacing="10.0">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleEdit" prefWidth="200.0" text="Edit">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSubmit" prefWidth="200.0" text="Submit">
                      <font>
                         <Font size="18.0" />
                      </font>

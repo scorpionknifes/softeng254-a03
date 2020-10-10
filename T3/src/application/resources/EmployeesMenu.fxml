@@ -38,11 +38,11 @@
             <Pane prefHeight="81.0" prefWidth="1200.0" />
             <TableView fx:id="_tableView" accessibleRole="TEXT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="931.0">
               <columns>
-                <TableColumn prefWidth="200.0" text="Name" />
-                <TableColumn prefWidth="200.0" text="Email" />
-                  <TableColumn prefWidth="200.0" text="Address" />
-                  <TableColumn prefWidth="200.0" text="Contact no" />
-                  <TableColumn prefWidth="200.0" text="IRD no" />
+                <TableColumn fx:id="_nameColumn" prefWidth="200.0" text="Name" />
+                <TableColumn fx:id="_emailColumn" prefWidth="200.0" text="Email" />
+                  <TableColumn fx:id="_addressColumn" prefWidth="200.0" text="Address" />
+                  <TableColumn fx:id="_contactNoColumn" prefWidth="200.0" text="Contact no" />
+                  <TableColumn fx:id="_irdNoColumn" prefWidth="200.0" text="IRD no" />
               </columns>
                <opaqueInsets>
                   <Insets />

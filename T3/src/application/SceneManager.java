@@ -8,6 +8,7 @@ import java.util.Stack;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -36,12 +37,22 @@ public final class SceneManager {
         MAIN_MENU("MainMenu.fxml"),
         /** Sales Menu scene */
         SALES_MENU("SalesMenu.fxml"),
+        /** Sale scene */
+        SALE_SCREEN("SaleScreen.fxml"),
         /** Products Menu scene */
         PRODUCTS_MENU("ProductsMenu.fxml"),
+        /** Product scene */
+        PRODUCT_SCREEN("Product.fxml"),
         /** Customers Menu scene */
         CUSTOMERS_MENU("CustomersMenu.fxml"),
+        /**  */
+
         /** Employees Menu scene */
-        EMPLOYEES_MENU("EmployeesMenu.fxml");
+        EMPLOYEES_MENU("EmployeesMenu.fxml"),
+
+        /** Select PopUp scene */
+        SELECT_SCREEN("SelectScreen.fxml"),
+        ;
 
         private final String _filename;
 
@@ -98,6 +109,26 @@ public final class SceneManager {
         });
         _history.push(scene);
         _rootStage.setScene(next);
+    }
+
+    /**
+     * Used to create popup
+     * 
+     * @param scene Scenes enum
+     * @throws RuntimeException
+     */
+    public void popUp(final Scenes scene) throws RuntimeException {
+        final Stage dialog = new Stage();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.initOwner(_rootStage);
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(PATH + scene._filename));
+            Scene dialogScene = new Scene(root, MINIMUM_WIDTH, MINIMUM_HEIGHT);
+            dialog.setScene(dialogScene);
+            dialog.show();
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     /**

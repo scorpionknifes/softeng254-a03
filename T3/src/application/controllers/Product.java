@@ -42,6 +42,7 @@ public class Product {
         _typeSelect.getItems().add("Hotel Deal");
         _typeSelect.getItems().add("Flight");
         _typeSelect.getItems().add("Package Deal");
+        _typeSelect.getItems().add("Special Deal");
         _typeSelect.setValue("Hotel Deal");
         _typeSelect.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
@@ -56,6 +57,9 @@ public class Product {
                         break;
                     case 2:
                         packageDeal();
+                        break;
+                    case 3:
+                        special();
                         break;
                 }
             }
@@ -129,6 +133,21 @@ public class Product {
         _gridpane.add(hotelBtn, 1, 2);
         _gridpane.add(flightBtn, 1, 3);
         _gridpane.add(providerBtn, 1, 4);
+    }
+
+    private void special() {
+        _field0.setText("Product:");
+        _field1.setText("");
+        _field2.setText("");
+        Button productBtn = new Button("Empty");
+        productBtn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                _stateManager.setSelect(Select.PRODUCT);
+                _sceneManager.popUp(Scenes.SELECT_SCREEN);
+            }
+        });
+        _gridpane.add(productBtn, 1, 2);
     }
 
     private void clearGrid() {
